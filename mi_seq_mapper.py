@@ -1,16 +1,16 @@
 #!/usr/bin/python
 
 mapper = {
-	 "hydrophila": 1321367,
-   "cereus" :  1441464,
-  "fragilis" : 1422847,
-   "abscessus" : 1335417,
-   "fermentans" : 1149860,
-   "sphaeroides" : 272943,
-   "aureus" :  1675528 ,
-   "pneumoniae" : 1449971,
-   "cholerae" :  1420885,
-   "axonopodis" : 1437877,
+	"cereus" : 1053231,
+	"freundii" : 1173724,
+	"cloacae": 1870957,
+	"pneumoniae" : 1455604,
+	"abscessus" :1001740,
+	"vulgaris" :1173773,
+	"sphaeroides" : 272943,
+	"aureus" :1075083,
+	"enterica": 1868170,
+	"cholerae" : 991923,
 }
 
 
@@ -24,7 +24,7 @@ def getUID(dna):
 	print dna
 	return -1
 
-Hi_file = open("HiSeq_accuracy.fa");
+Hi_file = open("/Users/youniesmahmoud/Desktop/test_kraken/accuracy/MiSeq_accuracy.fa");
 
 lines = Hi_file.read()
 lines = lines.split("\n")
@@ -53,7 +53,7 @@ for i in range(len(DNAS)):
 		DNAS[i] = getUID(DNAS[i])
 
 
-write_Hi = open("/Users/youniesmahmoud/Desktop/hi2.txt" , 'w')
+write_Hi = open("/Users/youniesmahmoud/Desktop/mi2.txt" , 'w')
 
 
 for DNA in DNAS:
